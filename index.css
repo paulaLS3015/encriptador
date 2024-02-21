@@ -1,0 +1,270 @@
+* {
+    background: var(--Light-blue-light-blue-100, #dce3ff);
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    width: 50%;
+}
+
+header .logo {
+    display: flex;
+    width: 120px;
+    height: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    flex-shrink: 0;
+    margin: 50px;
+}
+
+header #logo {
+    width: 120px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+/* ---------- ENTRADA ---------- */
+
+.form {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-left: 15%;
+}
+
+.form #texto {
+    color: var(--Dark-blue-dark-blue-300, #0a3871);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 48px */
+    border: none;
+    margin-bottom: 30%;
+}
+
+.form p {
+    color: var(--Gray-gray-400, #495057);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 18px */
+    opacity: 0.8;
+}
+
+.form .botones {
+    display: flex;
+    width: 680px;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 2% 0;
+
+}
+
+.form #encriptar {
+    display: inline-block;
+    width: 20%;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: var(--Dark-blue-dark-blue-300, #0a3871);
+    flex: 1 0 0;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form #desencriptar {
+    display: inline-block;
+    width: 20%;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid var(--Dark-blue-dark-blue-300, #0A3871);
+    background: #D8DFE8;
+    flex: 1 0 0;
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* ---------- SALIDA ---------- */
+
+.result {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    flex-shrink: 0;
+
+    border-radius: 32px;
+    background: white;
+
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    vertical-align: center;
+    text-align: center;
+    padding: 5% 0;
+}
+
+.result img,
+.result h1,
+.result p {
+    background-color: white;
+}
+
+.result .sin_texto h1 {
+    align-self: stretch;
+    color: var(--Gray-gray-500, #343A40);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 28.8px */
+}
+
+.result .sin_texto p {
+    align-self: stretch;
+    color: var(--Gray-gray-400, #495057);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 24px */
+}
+
+.result .con_texto .input {
+    height: 300px;
+    flex-shrink: 0;
+    color: var(--Gray-gray-400, #495057);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    /* 36px */
+}
+
+.result .con_texto #resultado {
+    width: 80%;
+    height: 80%;
+    background: white;
+    border: none;
+    padding: 8%;
+    margin-bottom: 10%;
+}
+
+.result .con_texto .button {
+    margin: 40px 0 0 0;
+    background: white;
+}
+
+.result .con_texto .button button {
+    background: white;
+    width: 336px;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 24px;
+    border: 1px solid var(--Dark-blue-dark-blue-300, #0A3871);
+    flex: 1 0 0;
+    color: var(--Dark-blue-dark-blue-300, #0A3871);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media screen and (max-width:900px){
+
+    main, .form, .result {
+        width: 100%;
+        display: block;
+    }
+
+    .result{
+        margin: 0 0 10% 10%;
+    }
+
+    .form #encriptar, .form #desencriptar, .result .con_texto #copiar{
+        width: 100%;
+    }
+
+    .result .sin_texto img{
+        visibility: hidden;
+        height: 0;
+
+    }
+
+    .result .con_texto .input {
+        height: 150px;
+    }
+
+    .result .con_texto textarea {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width:600px){
+
+    main, .form, .result {
+        width: 100%;
+        display: block;
+    }
+
+    .result{
+        margin: 0 0 20% 20%;
+    }
+
+    .form #encriptar, .form #desencriptar, .result .con_texto #copiar{
+        width: 100%;
+        margin: 5%;
+    }
+
+    .result .con_texto #copiar{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .form .botones{
+        display: block;
+        width: 100%;
+    }
+
+    .result .sin_texto img{
+        visibility: hidden;
+        height: 0;
+
+    }
+
+    .result .con_texto textarea {
+        font-size: 20px;
+    }
+
+}
